@@ -57,7 +57,6 @@ export const OpenVSCodeButton: React.FC<IOpenVSCodeButtonProps> = (props) => {
 	const openWithVSCodeCLI = (path: string) => {
 		setIsOpening(true);
 		const cmd = `code ${path.replace(/(\s+)/g, '\\$1')}`;
-		console.log(path, cmd)
 
 		exec(cmd, (err, stdout, stderr) => {
 			setIsOpening(false);
